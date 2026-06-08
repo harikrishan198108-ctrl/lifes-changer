@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Health Journey | Modern Wellness Support</title>
+    <style>
+        :root {
+            --primary: #2D6A4F;
+            --primary-light: #52B788;
+            --secondary: #D8F3DC;
+            --text-dark: #1B4332;
+            --text-light: #ffffff;
+            --bg-light: #F8F9FA;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--text-light);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            margin-left: 1.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary) 0%, #ffffff 100%);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .tagline {
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--primary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #4A5568;
+            margin-bottom: 2rem;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 4px 6px rgba(45, 106, 79, 0.2);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-2px);
+        }
+
+        /* Social Proof Banner */
+        .proof-banner {
+            background-color: var(--primary);
+            color: var(--text-light);
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9.5rem;
+        }
+
+        /* How It Works Section */
+        .features {
+            padding: 5rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--text-dark);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border-top: 4px solid var(--primary-light);
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        /* Scientific Approach Section */
+        .science-section {
+            background-color: #ffffff;
+            padding: 5rem 2rem;
+        }
+
+        .science-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .science-container p {
+            font-size: 1.1rem;
+            color: #4A5568;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        /* Process Steps */
+        .steps {
+            background-color: var(--secondary);
+            padding: 5rem 2rem;
+        }
+
+        .steps-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .step-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .step-item {
+            display: flex;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            align-items: center;
+        }
+
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 5rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .faq-item h4 {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        /* Final CTA */
+        .final-cta {
+            text-align: center;
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #ffffff 0%, var(--secondary) 100%);
+        }
+
+        /* Footer & Disclaimers (Crucial for Policy Approval) */
+        footer {
+            background-color: #1A202C;
+            color: #A0AEC0;
+            padding: 4rem 2rem 2rem 2rem;
+            font-size: 0.85rem;
+            border-top: 1px solid #2D3748;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .disclaimer-text {
+            margin-bottom: 2rem;
+            line-height: 1.7;
+            border-bottom: 1px solid #2D3748;
+            padding-bottom: 2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-links a {
+            color: #A0AEC0;
+            text-decoration: none;
+            margin-right: 1rem;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .hero { padding: 3rem 1rem; }
+            .grid { grid-template-columns: 1fr; }
+            .step-item { flex-direction: column; text-align: center; }
+            .step-number { margin-right: 0; margin-bottom: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">AuraWellness</div>
+        <div class="nav-links">
+            <a href="#benefits">Benefits</a>
+            <a href="#how-it-works">Our Process</a>
+            <a href="#faq">FAQs</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-container">
+            <p class="tagline">Science-Backed Weight Management</p>
+            <h1>A Modern Approach to Sustainable Metabolic Health</h1>
+            <p>Discover how regulatory naturally-occurring pathways can help balance your appetite, stabilize your energy, and support long-term wellness goals safely under expert clinical guidance.</p>
+            <a href="#cta-form" class="cta-btn">Check Your Eligibility Online</a>
+        </div>
+    </section>
+
+    <div class="proof-banner">
+        ✦ Consultations managed by board-certified healthcare professionals.
+    </div>
+
+    <section class="features" id="benefits">
+        <div class="section-title">
+            <h2>A Comprehensive Plan Tailored For Real Life</h2>
+            <p style="color: #666; margin-top: 0.5rem;">Moving beyond traditional crash diets to focus on true metabolic control.</p>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <h3>Appetite Control Blueprint</h3>
+                <p>Learn how modern innovations mirror natural signals to help regulate your body's natural response to hunger, keeping cravings muted throughout your day.</p>
+            </div>
+            <div class="card">
+                <h3>Metabolic Optimization</h3>
+                <p>Support your body’s naturally occurring insulin response, allowing you to sustain steady energy levels without the typical afternoon crashes.</p>
+            </div>
+            <div class="card">
+                <h3>Full Clinical Guidance</h3>
+                <p>Never walk the path alone. Receive tailored guidance, oversight, and continuous progress check-ins from credentialed medical providers.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="science-section">
+        <div class="science-container">
+            <div class="section-title">
+                <h2>The Science Behind Your Journey</h2>
+            </div>
+            <p>Sustainable biological shifts happen when you work *with* your biology, not against it. Modern wellness tools focus primarily on mimicking standard GLP-1 pathways—a vital hormone naturally produced by your body to manage digestion and signal satiety to the brain.</p>
+            <p>By optimizing this mechanism, individuals can safely lower their baseline hunger levels, manage portion sizes without feeling deprived, and build foundational habits that safeguard long-term health outcomes.</p>
+        </div>
+    </section>
+
+    <section class="steps" id="how-it-works">
+        <div class="steps-container">
+            <div class="section-title">
+                <h2>Your Path to Getting Started</h2>
+            </div>
+            <div class="step-list">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div>
+                        <strong>Online Health Assessment</strong>
+                        <p style="color: #555;">Fill out a confidential medical questionnaire detailing your health goals, history, and physical profile.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div>
+                        <strong>Medical Practitioner Review</strong>
+                        <p style="color: #555;">A licensed physician analyzes your unique data profile to determine if a prescription approach fits your physiology.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div>
+                        <strong>Discreet Home Delivery & Support</strong>
+                        <p style="color: #555;">Approved programs are shipped straight to your door alongside educational resources to start your transformation smoothly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="section-title">
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-item">
+            <h4>How do modern metabolic programs work?</h4>
+            <p>Programs utilize advanced peptide integrations designed to mimic hormone receptors in the brain responsible for satiety, allowing for natural calorie deficits without severe restriction.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Is clinical supervision required?</h4>
+            <p>Yes. All prescriptive wellness paths require mandatory, continuous evaluations from our healthcare network to monitor individual thresholds and health markers.</p>
+        </div>
+        <div class="faq-item">
+            <h4>What should I anticipate regarding lifestyle changes?</h4>
+            <p>The solution is intended to act as a powerful accelerator alongside balanced, nutrient-dense nutrition profiles and mild regular physical movement.</p>
+        </div>
+    </section>
+
+    <section class="final-cta" id="cta-form">
+        <h2>Ready to Explore Your Options Safely?</h2>
+        <p style="margin: 1rem 0 2rem; color: #4A5568;">Take the first step toward customized, medically supported lifestyle management.</p>
+        <a href="#" class="cta-btn">Begin Consultation Form Now</a>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="disclaimer-text">
+                <p><strong>Medical Disclaimer:</strong> The statements regarding these health programs and wellness strategies have not been evaluated by the Food and Drug Administration. Prescription options are subject to medical provider approval and require an online video or chat consultation. This product is not intended to diagnose, treat, cure, or prevent any disease. Results vary based on individual physiological baselines, commitment to nutrition, and active medical parameters.</p>
+                <br>
+                <p><strong>Advertising Policy Statement:</strong> This website values platform compliance guidelines. We do not guarantee specific weight loss numbers or specific timelines. Images used across marketing vectors are for illustrative lifestyle representation only.</p>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <p>&copy; 2026 AuraWellness. All rights reserved.</p>
+                </div>
+                <div>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Medical Evaluation Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

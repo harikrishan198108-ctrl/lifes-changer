@@ -284,12 +284,28 @@
             .step-number { margin-right: 0; margin-bottom: 1rem; }
         }
  </style>
-    <!-- Reddit Pixel -->
-<script>
-!function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js?pixel_id=a2_jfi5261ymqcz",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','a2_jfi5261ymqcz');rdt('track', 'PageVisit');
-</script>
-<!-- DO NOT MODIFY UNLESS TO REPLACE A USER IDENTIFIER -->
-<!-- End Reddit Pixel -->
+    "data": [{
+	"event_name": "ADD_CART",
+	"action_source": "website",
+	"event_source_url": "INSERT_YOUR_WEBSITE",
+	"event_time": INSERT_EPOCH_TIMESTAMP,
+
+	"user_data": {
+	"em": ["INSERT_HASHED_EMAIL_VALUE"],
+	"ph": ["INSERT_HASHED_PHONE_NUMBER_VALUE"],
+	"user_agent": "INSERT_CLIENT_USER_AGENT",
+	"client_ip_address": "INSERT_CLIENT_IP_ADDRESS",
+	"sc_click_id": "INSERT_CLICK_ID",
+	"sc_cookie1": "INSERT_scID"},
+
+	"custom_data": {
+	"event_id": "INSERT_EVENT_ID",
+	"value": "INSERT_PRICE",
+	"currency": "INSERT_CURRENCY_CODE",
+	"content_ids": ["INSERT_ITEM_ID"],
+	"content_category": ["INSERT_CATEGORY"],
+	"number_items": ["INSERT_QUANTITY_1", "INSERT_QUANTITY_2"]}
+	}]
 </head>
 <body>
 
